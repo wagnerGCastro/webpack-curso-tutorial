@@ -1,0 +1,18 @@
+{
+  "name": "webpack-wagner",
+  "version": "1.0.0",
+  "description": "webpack-tutorial",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "curso-webpack-tutorial"
+  },
+  "author": "wagner",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^3.1.0"
+  }
+}
