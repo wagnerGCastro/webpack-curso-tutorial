@@ -6,5 +6,5 @@
 	//import { sayHelloTo } from './hello.js';
 
 const span = document.createElement('span');
-span.innerText = sayHelloTo('Javascript Developer');
+span.innerText = sayHelloTo('JS Developer');
 document.body.appendChild(span);
