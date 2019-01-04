@@ -1,6 +1,4 @@
 
-debugger;
-
 // 1 - maneira de importa arquivo
 	const { sayHelloTo } = require('./hello.js');
 
