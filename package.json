@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-dev": "webpack",
-    "start": "webpack-dev-server --content-base build"
+    "start": "webpack-dev-server --content-base build --hot"
   },
   "repository": {
     "type": "git",
