@@ -11,5 +11,8 @@
     "url": "curso-webpack-tutorial"
   },
   "author": "wagner",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^3.1.0"
+  }
 }
