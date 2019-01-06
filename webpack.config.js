@@ -10,8 +10,8 @@ module.exports = {
 	module: 	{
 		loaders: [
 			{
-				test: 		/\.tsx?$/,				// all files with a `.ts` or `.tsx` extension will be handled by `ts-loade
-				include: 	['node_modules'],   // com execessão node_modules 
+				test: 		/\.tsx?$/,				
+				include: 	[path.resolve(__dirname, 'src/ts')], 
 				loader: 	'ts-loader'
 			},
 			{	
@@ -25,5 +25,8 @@ module.exports = {
 			    ]
 			}
 		]
-	}
+	},
+	resolve: {
+    	extensions: ['.wasm', '.mjs', '.js', '.json', '.ts', '.css', '.scss']
+  	}
 }

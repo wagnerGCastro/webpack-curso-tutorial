@@ -1,13 +1,10 @@
 import './../css/index.css'
 
+import { sayHelloTo } from './hello';
 
-// 1 - maneira de importa arquivo
-	//const { sayHelloTo } = require('./hello.ts');
-
-// 2 - maniera de importar arquivo
-	import { sayHelloTo } from './hello.js';
-
+var module: any;
 const span = document.createElement('span');
+
 span.innerText = sayHelloTo('Javascript Developer');
 document.body.appendChild(span);
 
