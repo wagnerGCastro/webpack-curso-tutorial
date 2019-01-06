@@ -1,9 +1,11 @@
 const path = require('path');
 
+const resolvePath = (pathToResolve = '') => path.resolve(__dirname, pathToResolve)
+
 module.exports = {
-	entry: 		path.resolve(__dirname, "src/ts/app.ts"),
+	entry: 		resolvePath('src/ts/app/app.ts'),
 	output: 	{
-		path: 		path.resolve(__dirname, "build"),
+		path: 		resolvePath('build'),
 		filename: 	"bundle.js"
 	},
 	devtool: 		'source-map',
@@ -11,13 +13,13 @@ module.exports = {
 		loaders: [
 			{
 				test: 		/\.tsx?$/,				
-				include: 	[path.resolve(__dirname, 'src/ts')], 
+				include: 	[resolvePath('src/ts')],
 				loader: 	'ts-loader'
 			},
 			{	
 				//test: 	 	/\.css$/,   // .sass e .scss e css
-			    test: 	/\.s(a|c)ss$/,   // .sass e .scss e css
-			    include: 	[path.resolve(__dirname, 'src/styles')],  
+			    test: 		/\.s(a|c)ss$/,   // .sass e .scss e css
+			    include: 	[resolvePath('src/styles')],
 			    loader: 	[
 			        "style-loader", // creates style nodes from JS strings
 			        "css-loader", // translates CSS into CommonJS
@@ -27,6 +29,11 @@ module.exports = {
 		]
 	},
 	resolve: {
-    	extensions: ['.wasm', '.mjs', '.js', '.json', '.ts', '.css', '.scss']
+    	extensions: ['.wasm', '.mjs', '.js', '.json', '.ts', '.css', '.scss'],
+    	alias: 		{
+    		styles: resolvePath('src/styles'),
+            helpers: resolvePath('src/ts/helpers')
+    		
+    	}
   	}
 }
