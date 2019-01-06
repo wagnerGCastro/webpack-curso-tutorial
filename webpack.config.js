@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const path = require('path');
 
 const resolvePath = (pathToResolve = '') => path.resolve(__dirname, pathToResolve)
@@ -35,5 +36,12 @@ module.exports = {
             helpers: resolvePath('src/ts/helpers')
     		
     	}
-  	}
+  	},
+  	plugins: [
+  		new webpack.optimize.UglifyJsPlugin(
+	  		{
+	            compress: { warnings: false }
+	        }
+        )
+  	]
 }
