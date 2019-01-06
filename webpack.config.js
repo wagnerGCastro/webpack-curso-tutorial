@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 
 const resolvePath = (pathToResolve = '') => path.resolve(__dirname, pathToResolve)
+const isProductionEnvironment = process.env.NODE_ENV === 'production'
 
 module.exports = {
 	entry: 		resolvePath('src/ts/app/app.ts'),
@@ -37,11 +38,11 @@ module.exports = {
     		
     	}
   	},
-  	plugins: [
+  	plugins: 	isProductionEnvironment ? [
   		new webpack.optimize.UglifyJsPlugin(
 	  		{
 	            compress: { warnings: false }
 	        }
         )
-  	]
+  	] : []
 }
