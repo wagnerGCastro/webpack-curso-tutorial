@@ -1,6 +1,6 @@
 
 // 1 - maneira de importa arquivo
-	const { sayHelloTo } = require('./hello.js');
+	const { sayHelloTo } = require('./hello.ts');
 
 // 2 - maniera de importar arquivo
 	//import { sayHelloTo } from './hello.js';
