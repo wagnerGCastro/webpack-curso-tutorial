@@ -10,9 +10,19 @@ module.exports = {
 	module: 	{
 		loaders: [
 			{
-				test: /\.tsx?$/,				// all files with a `.ts` or `.tsx` extension will be handled by `ts-loade
+				test: 		/\.tsx?$/,				// all files with a `.ts` or `.tsx` extension will be handled by `ts-loade
 				include: 	['node_modules'],   // com execessão node_modules 
 				loader: 	'ts-loader'
+			},
+			{	
+				test: 	 	/\.css$/,   // .sass e .scss e css
+			    //test: 	/\.s(a|c)ss$/,   // .sass e .scss e css
+			    include: 	[path.resolve(__dirname, 'src/css')],  
+			    loader: 	[
+			        "style-loader", // creates style nodes from JS strings
+			        "css-loader", // translates CSS into CommonJS
+			      	//  "sass-loader" // compiles Sass to CSS, using Node Sass by default
+			    ]
 			}
 		]
 	}
