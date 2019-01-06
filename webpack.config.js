@@ -13,6 +13,16 @@ module.exports = {
 				test: 		/\.tsx?$/,				
 				include: 	[path.resolve(__dirname, 'src/ts')], 
 				loader: 	'ts-loader'
+			},
+			{	
+				test: 	 	/\.css$/,   // .sass e .scss e css
+			    //test: 	/\.s(a|c)ss$/,   // .sass e .scss e css
+			    include: 	[path.resolve(__dirname, 'src/css')],  
+			    loader: 	[
+			        "style-loader", // creates style nodes from JS strings
+			        "css-loader", // translates CSS into CommonJS
+			      	//  "sass-loader" // compiles Sass to CSS, using Node Sass by default
+			    ]
 			}
 		]
 	},
