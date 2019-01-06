@@ -1,4 +1,4 @@
-import './../styles/index'
+import './../../styles/index'
 import { sayHelloTo } from './hello';
 
 var module: any;
