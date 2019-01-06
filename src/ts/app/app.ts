@@ -1,13 +1,14 @@
-import './../../styles/index'
+//import './../../styles/index'
+import 'styles'
 import { sayHelloTo } from './hello';
 
 var module: any;
-const span = document.createElement('span');
+const h1 = document.createElement('h1');
 
-span.innerText = sayHelloTo('Javascript Developer');
-document.body.appendChild(span);
+h1.innerText = sayHelloTo('Javascript Developer');
+document.body.appendChild(h1);
 
 if (module.hot) {
 	module.hot.accept();
-	module.hot.dispose( () => span.parentNode.removeChild(span) );
+	module.hot.dispose( () => h1.parentNode.removeChild(h1) );
 }
